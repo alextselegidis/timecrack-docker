@@ -1,7 +1,7 @@
 <h1 align="center">
     <br>
     <a href="https://timecrack.org">
-        <img src="https://raw.githubusercontent.com/alextselegidis/timecrack/develop/logo.png" alt="Timecrack" width="150">
+        <img src="https://raw.githubusercontent.com/alextselegidis/timecrack/main/logo.png" alt="Timecrack" width="150">
     </a>
     <br>
     Timecrack Docker
