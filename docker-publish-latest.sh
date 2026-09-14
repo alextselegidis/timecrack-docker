@@ -11,7 +11,10 @@
 # -----------------------------------------------------------------------------
 
 ##
-# Publish a docker image tag for an Timecrack release.
+# Point the "latest" tag to an already published Timecrack release.
+#
+# This copies the manifest of the version tag instead of building again, so that "latest" is byte for byte
+# the image that was published with "docker-publish.sh".
 #
 # Usage:
 #
@@ -26,4 +29,4 @@ DEFAULT_VERSION=1.5.0
 
 VERSION="${1:-$DEFAULT_VERSION}"
 
-docker buildx build --push --platform linux/amd64,linux/arm64 -t alextselegidis/timecrack:latest --build-arg VERSION=${VERSION} .
+docker buildx imagetools create -t alextselegidis/timecrack:latest alextselegidis/timecrack:${VERSION}
